@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        nav {
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 1rem;
+            height: 7rem;
+
+
+        }
+
+        .toggle-container {
+            float: right;
+            height: 4rem;
+            /* border: 4px solid #4b2e0f; */
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            margin-left: 3rem;
+        }
+
+        .toggle-ball img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            transition: left 0.4s ease-in-out, transform 0.2s;
+        }
+
+        .mar {
+            margin: 1rem 30rem 1rem 20rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            padding: 1rem;
+            color: white;
+            font-size: 1.7rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .first {
+            background-image: url(./photo.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        .main {
+            margin-top: 20rem;
+            margin-left: 10rem;
+            margin-bottom: 5rem;
+        }
+
+        .main2 {
+            margin-top: 5rem;
+            /* margin-left: 6rem; */
+            background-color: red;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        button {
+            display: inline;
+        }
+
+
+        .about-section {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 80px 100px; */
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-content {
+            flex: 1;
+            margin-left: 10rem;
+            /* max-width: 600px; */
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .menu-btn {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-weight: bold;
+            background-color: #e52d27;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            height: 25rem;
+            border-radius: 8px;
+        }
+
+
+        .menu-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .menu-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .menu-section p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .tabs {
+      display: flex;
+      background-color: #fff;
+      margin-top: 40px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .tab {
+      padding: 40px;
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+      color: #333;
+      border-right: 1px solid #eee;
+      background-color: #fff;
+    }
+
+    .tab:last-child {
+      border-right: none;
+    }
+
+    .tab.active {
+      background-color: #f22d2d;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tabs {
+        flex-direction: column;
+      }
+
+      .tab {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .tab:last-child {
+        border-bottom: none;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (min-width:1000.99px) and (max-width:2000px) {
+
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+        }
+
+
+
+        @media (min-width:700.99px) and (max-width:1000px) {
+            nav {
+                height: 17rem;
+            }
+
+            .login {
+                width: 30%
+            }
+
+
+            .imagecontainer img {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            .parent {
+                height: 100vh;
+            }
+
+            .back {
+                height: 30vh;
+            }
+
+            .col-md-1 {
+                width: 8.33%;
+            }
+
+            .col-md-2 {
+                width: 16.66%;
+            }
+
+            .col-md-3 {
+                width: 25%;
+            }
+
+            .col-md-4 {
+                width: 33.33%;
+            }
+
+            .col-md-5 {
+                width: 41.66%;
+            }
+
+            .col-md-6 {
+                width: 50%;
+            }
+
+            .col-md-7 {
+                width: 58.33%;
+            }
+
+            .col-md-8 {
+                width: 66.66%;
+            }
+
+            .col-md-9 {
+                width: 75%;
+            }
+
+            .col-md-10 {
+                width: 83.33%;
+            }
+
+            .col-md-11 {
+                width: 91.66%;
+            }
+
+            .col-md-12 {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+
+        @media screen and (max-width:700px) {
+
+            nav {
+                height: 30rem;
+                flex-direction: column;
+            }
+
+            .login {
+                width: 40%;
+            }
+
+            .wel {
+                height: 150rem;
+            }
+
+            .header {
+                margin-top: 50rem;
+            }
+
+
+            .imagecontainer img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            .parent {
+                height: 170vh;
+            }
+
+            .parent1 {
+                height: 250vh;
+            }
+
+            .sec {
+                height: 250vh;
+            }
+
+            .wel {
+                width: 150%;
+            }
+
+            .back {
+                height: 35vh;
+            }
+
+            .links,
+            .form1 {
+                flex-direction: column;
+            }
+
+            .col-sm-1 {
+                width: 8.33%;
+            }
+
+            .col-sm-2 {
+                width: 16.67%;
+            }
+
+            .col-sm-3 {
+                width: 25%;
+            }
+
+            .col-sm-4 {
+                width: 33.33%;
+            }
+
+            .col-sm-5 {
+                width: 41.67%;
+            }
+
+            .col-sm-6 {
+                width: 50%;
+            }
+
+            .col-sm-7 {
+                width: 58.33%;
+            }
+
+            .col-sm-8 {
+                width: 66.67%;
+            }
+
+            .col-sm-9 {
+                width: 75%;
+
+            }
+
+            .col-sm-10 {
+                width: 83.33%;
+            }
+
+            .col-sm-11 {
+                width: 91.67;
+            }
+
+            .col-sm-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="col-12 col-md-12 col-sm-12">
+        <div class="toggle-container col-1 col-md-1 col-sm-1 " onclick="toggleSwitch()">
+            <div class="toggle-ball">
+                <img src="./sun.png" id="ball" />
+            </div>
+        </div>
+        <div class="mar col-5 col-md-11 col-sm-4">
+            <a class="col-1 col-md-4 col-sm-11" href="">Home</a>
+            <a class="col-1 col-md-4 col-sm-11" href="">About</a>
+            <a class="col-1 col-md-4 col-sm-11" href="">Menu</a>
+            <a class="col-1 col-md-4 col-sm-11" href="">Gallery</a>
+            <a class="col-1 col-md-4 col-sm-11" href="">Contact</a>
+        </div>
+
+    </nav>
+
+    <section class="first col-12 col-md-12 col-sm-12">
+        <div class="main col-6 col-md-9 col-sm-11">
+            <p>Wide Options of Choice</p>
+            <h1 class="col-11 col-md-11 col-sm-11">Delicious Recipes</h1>
+            <p class="col-10 col-md-11 col-sm-11">inappropriate behavior is often laughed off as “boys will be boys,”
+                women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.
+            </p>
+            <button>Check Our Menu</button>
+        </div>
+    </section>
+
+
+    <section class="about-section col-12 col-md-12 col-sm-12">
+        <div class="about-content col-5 col-md-11 col-sm-11">
+            <h2 class="col-11 col-md-11 col-sm-11" >About Our Story</h2>
+            <p class="col-10 col-md-11 col-sm-11">
+                Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <button class="menu-btn">View Full Menu</button>
+        </div>
+        <div class="about-image col-5 col-md-11 col-sm-11">
+            <img src="./photo.avif" alt="Burger" />
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+     <section class="menu-section">
+    <h2>What kind of Foods we serve for you</h2>
+    <p>Who are in extremely love with eco friendly system.</p>
+
+    <div class="tabs" id="menuTabs">
+      <div class="tab active">All Menu</div>
+      <div class="tab">Breakfast</div>
+      <div class="tab">Lunch</div>
+      <div class="tab">Dinner</div>
+      <div class="tab">Budget Meal</div>
+      <div class="tab">Buffet</div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function toggleSwitch() {
+            const ball = document.getElementById('ball');
+            ball.classList.toggle('active');
+            if (ball.classList.contains("active")) {
+                document.body.style.backgroundColor = "white";
+                ball.src = "sun.png";
+            } else {
+                document.body.style.backgroundColor = "black";
+                ball.src = "moon.png";
+                document.body.style.color = "white";
+            }
+        }
+
+         const tabs = document.querySelectorAll(".tab");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+      });
+    });
+
+
+    </script>
+</body>
+
+</html>
